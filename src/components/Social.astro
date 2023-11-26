@@ -1,0 +1,15 @@
+---
+const { platform, username } = Astro.props;
+
+const capitalize = (str: string) => str.slice(0, 1).toUpperCase() + str.slice(1);
+---
+<a href={`https://www.${platform}.com/${username}`}>{capitalize(platform)}</a>
+
+<style>
+    a {
+        padding: 0.5rem 1rem;
+        color: white;
+        background-color: #4c1d95;
+        text-decoration: none;
+    }
+</style>
